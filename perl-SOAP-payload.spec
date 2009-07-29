@@ -1,23 +1,25 @@
-%define real_name SOAP-payload
+%define upstream_name    SOAP-payload
+%define upstream_version 1.02
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	SOAP::payload - Perl module to send various forms of information as SOAP envelopes
-Name:		perl-%{real_name}
-Version:	1.02
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/U/UN/UNIXTOWN/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/U/UN/UNIXTOWN/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module can be used in conjunction with other modules such as
 DBI, to send data elements as part of a SOAP transaction envelope.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -36,4 +38,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/SOAP/payload.pm
 %{_mandir}/*/*
-
