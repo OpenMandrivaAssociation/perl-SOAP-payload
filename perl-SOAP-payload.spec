@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Perl module to send various forms of information as SOAP envelopes
 License:	GPL+ or Artistic
