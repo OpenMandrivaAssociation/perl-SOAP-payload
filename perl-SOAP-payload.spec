@@ -2,14 +2,14 @@
 %define upstream_version 1.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Perl module to send various forms of information as SOAP envelopes
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/U/UN/UNIXTOWN/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/SOAP-payload
+Source0:	https://cpan.metacpan.org/authors/id/U/UN/UNIXTOWN/SOAP-payload-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
